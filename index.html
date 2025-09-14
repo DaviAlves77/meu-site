@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mensagem</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 60px;
+      color: white;
+      background-color: black;
+      text-align: center;
+      transition: background-color 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="mensagem">vai tomar no cu</div>
+
+  <script>
+    function gerarCorAleatoria() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    setInterval(() => {
+      document.body.style.backgroundColor = gerarCorAleatoria();
+    }, 1000);
+  </script>
+</body>
+</html>
